@@ -1,9 +1,9 @@
 #include <windows.h> // console functions
 #include <cstdio> // std::printf, std::size_t
 
-#define MAX_INPUT_LENGTH 255	// fixed length (handle input limit separately)
-								// if console input buffer data > MAX_INPUT_LENGTH
-								// ReadConsole will read the rest on the next call
+#define MAX_INPUT_LENGTH 255	/* fixed length (handle input limit separately)
+                            	if console input buffer data > MAX_INPUT_LENGTH
+                            	ReadConsole will read the rest on the next call*/
 
 int main()
 {
