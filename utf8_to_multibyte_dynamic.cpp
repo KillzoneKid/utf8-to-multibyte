@@ -2,7 +2,7 @@
 #include <cstdio> // std::printf, std::size_t
 #include <string> // std::string, std::wstring
 
-#define DEFAULT_INPUT_LENGTH 255 // any length > 0, really
+#define DEFAULT_INPUT_LENGTH 255 // any length > 0 really
 
 int main()
 {

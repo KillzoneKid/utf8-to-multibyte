@@ -3,7 +3,7 @@
 
 #define MAX_INPUT_LENGTH 255	/* fixed length (handle input limit separately)
                             	if console input buffer data > MAX_INPUT_LENGTH
-                            	ReadConsole will read the rest on the next call*/
+                            	ReadConsole will read the rest on the next call */
 
 int main()
 {
