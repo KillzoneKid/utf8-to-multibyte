@@ -15,7 +15,7 @@ int main()
 	DWORD n_read;
 	HANDLE console = GetStdHandle(STD_INPUT_HANDLE);
 
-	ReadConsole(console, w_str, MAX_INPUT_LENGTH, &n_read, NULL);
+	ReadConsoleW(console, w_str, MAX_INPUT_LENGTH, &n_read, NULL);
 
 	int ch_size = WideCharToMultiByte(CP_UTF8, 0, w_str, n_read, mb_str, sizeof(mb_str), NULL, NULL);
 	mb_str[ch_size] = 0;
