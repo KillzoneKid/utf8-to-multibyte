@@ -23,7 +23,7 @@ int main()
 	}
 
 	int mb_size = WideCharToMultiByte(CP_UTF8, 0, ws.data(), ws.length(), NULL, 0, NULL, NULL);
-	std::unique_ptr<CHAR[]> mb_str = std::make_unique<CHAR[]>(static_cast<std::size_t>(mb_size));
+	std::unique_ptr<char[]> mb_str = std::make_unique<char[]>(static_cast<std::size_t>(mb_size));
 
 	WideCharToMultiByte(CP_UTF8, 0, ws.data(), ws.length(), mb_str.get(), mb_size, NULL, NULL);
 	std::string s(mb_str.get(), static_cast<std::size_t>(mb_size));
