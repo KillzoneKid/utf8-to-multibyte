@@ -24,8 +24,8 @@ int main()
 	int mb_size = WideCharToMultiByte(CP_UTF8, 0, ws.data(), static_cast<int>(ws.length()), NULL, 0, NULL, NULL);
 	std::string mb_str(static_cast<std::size_t>(mb_size), 0);
 
-	//since C++17 mb_str.data() is mutable, since C++11 &mb_str[0] is ok instead
-	WideCharToMultiByte(CP_UTF8, 0, ws.data(), static_cast<int>(ws.length()), &mb_str[0], mb_size, NULL, NULL);
+	//since C++17 mb_str.data() is mutable, since C++11 &(mb_str[0]) is ok instead
+	WideCharToMultiByte(CP_UTF8, 0, ws.data(), static_cast<int>(ws.length()), &(mb_str[0]), mb_size, NULL, NULL);
 
 	std::printf("ENTERED: %s\n", mb_str.data()); // because std::cout prints gibberish
 
